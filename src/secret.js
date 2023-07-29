@@ -7,4 +7,7 @@ const mongodbURL =
 const defaultImagePath =
   process.env.DEFAULT_USER_IMAGE_PATH || "public/images/users/default.png";
 
-module.exports = { serverPort, mongodbURL, defaultImagePath };
+const jwtActivationKey =
+  process.env.JWT_ACTIVATION_KEY || "lkdslsdjhweopuywekjt[piw";
+
+module.exports = { serverPort, mongodbURL, defaultImagePath, jwtActivationKey };
