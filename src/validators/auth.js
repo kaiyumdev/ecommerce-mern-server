@@ -32,7 +32,12 @@ const validateRegistration = [
     .trim()
     .notEmpty()
     .withMessage("Phone is required. Enter phone number here."),
-  body("image").optional().isString().withMessage("Image is required"),
+  body("image").custom((value, { req }) => {
+    if (!req.file || !req.file.buffer) {
+      throw new Error("User image is required");
+    }
+    return true;
+  }),
 ];
 
 module.exports = validateRegistration;
