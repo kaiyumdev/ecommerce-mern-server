@@ -27,5 +27,4 @@ const emailWithNodeMailer = async (emailData) => {
     throw error;
   }
 };
-
 module.exports = emailWithNodeMailer;
