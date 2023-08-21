@@ -7,9 +7,9 @@ const {
   activateUserAccount,
   updateUserById,
 } = require("../controllers/userController");
-const upload = require("../middlewares/uploadFile");
 const validateRegistration = require("../validators/auth");
 const runValidation = require("../validators");
+const upload = require("../middlewares/uploadFile");
 const userRouter = express.Router();
 
 userRouter.post(
